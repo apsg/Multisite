@@ -17,6 +17,34 @@ $ composer require apsg/multisite
 
 ## Usage
 
+After the installation:
+##### Add your domain to your `.env` file, i.e.:
+
+```
+MULTISITE_DOMAIN=test
+```
+
+##### Add view folder
+
+Create new view folder for your domain:
+
+``` bash
+mkdir resources/views/test
+```
+
+##### Override the view service provider
+
+in `config/app.php` find this line (in `providers` section):
+``` php
+Illuminate\View\ViewServiceProvider::class,
+```
+and change it to:
+```php
+\Apsg\Multisite\Providers\ViewServiceProvider::class,
+```
+
+And that's it! 
+
 ## Change log
 
 Please see the [changelog](changelog.md) for more information on what has changed recently.
