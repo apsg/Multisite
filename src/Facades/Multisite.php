@@ -4,6 +4,12 @@ namespace Apsg\Multisite\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
+/**
+ * Class Multisite
+ * @package Apsg\Multisite\Facades
+ *
+ * @static-method domain()
+ */
 class Multisite extends Facade
 {
     /**
