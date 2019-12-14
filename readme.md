@@ -81,14 +81,14 @@ $ composer test
 
 license. Please see the [license file](license.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/gacek/multisite.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/gacek/multisite.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/gacek/multisite/master.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/apsg/multisite.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/apsg/multisite.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/apsg/multisite/master.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/12345678/shield
 
-[link-packagist]: https://packagist.org/packages/gacek/multisite
-[link-downloads]: https://packagist.org/packages/gacek/multisite
-[link-travis]: https://travis-ci.org/gacek/multisite
+[link-packagist]: https://packagist.org/packages/apsg/multisite
+[link-downloads]: https://packagist.org/packages/apsg/multisite
+[link-travis]: https://travis-ci.org/apsg/multisite
 [link-styleci]: https://styleci.io/repos/12345678
-[link-author]: https://github.com/gacek
+[link-author]: https://github.com/apsg
 [link-contributors]: ../../contributors
