@@ -30,4 +30,19 @@ class Multisite
     {
         return public_path("{$type}/" . self::domain() . ".{$type}");
     }
+
+    public static function cssUrl()
+    {
+        return self::resourceUrl('css');
+    }
+
+    public static function jsUrl()
+    {
+        return self::resourceUrl('js');
+    }
+
+    public static function resourceUrl(string $type)
+    {
+        return url("{$type}/" . self::domain() . ".{$type}");
+    }
 }
