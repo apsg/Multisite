@@ -45,28 +45,37 @@ and change it to:
 
 And that's it! 
 
-## Change log
+## Multisite assets
 
-Please see the [changelog](changelog.md) for more information on what has changed recently.
+To compile your assets in your `webpack.mix.js` add something like that:
+
+```js
+// ----- MULTISITE -----------------
+let domains = [
+    'site1',
+    'site2'
+];
+
+for (let domain of domains) {
+    mix.js('resources/assets/js/' + domain + '.js', 'public/js', domain + '.js')
+        .sass('resources/assets/sass/' + domain + '.scss', 'public/css', domain + '.css');
+}
+```
+
+This will search automatically for files `resources/js/{domain}.js` and `resources/sass/{domain}.scss`, compile them and move them to directories `public/js/{domain}.js` and `public/css/{domain}.css` respectively.
+
+Then one can use helpers provided with this package to automagically load in your layout file only domain-related files:
+
+```html
+    <link href="{{ multisite_css() }}" rel="stylesheet">
+    <script src="{{ multisite_js() }}"></script>
+```
 
 ## Testing
 
 ``` bash
 $ composer test
 ```
-
-## Contributing
-
-Please see [contributing.md](contributing.md) for details and a todolist.
-
-## Security
-
-If you discover any security related issues, please email author email instead of using the issue tracker.
-
-## Credits
-
-- [author name][link-author]
-- [All Contributors][link-contributors]
 
 ## License
 
