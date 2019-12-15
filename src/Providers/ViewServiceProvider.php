@@ -1,7 +1,6 @@
 <?php
 namespace Apsg\Multisite\Providers;
 
-use Apsg\Multisite\Facades\Multisite;
 use Illuminate\View\FileViewFinder;
 use Illuminate\View\ViewServiceProvider as ConcreteViewServiceProvider;
 
@@ -17,7 +16,7 @@ class ViewServiceProvider extends ConcreteViewServiceProvider
         $this->app->bind('view.finder', function ($app) {
             $paths = $app['config']['view.paths'];
 
-            $paths[] = resource_path('/views/' . Multisite::domain());
+            $paths[] = resource_path('views/' . $app['config']['multisite.domain']);
 
             return new FileViewFinder($app['files'], $paths);
         });
