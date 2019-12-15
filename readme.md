@@ -4,7 +4,10 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
 
-This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
+Package for managing multiple installations of the same code base. It gives the ability to change the views depending 
+on the "domain" but preserving the backend core the same. 
+
+It also lets you to define domain-specifig config.
 
 ## Installation
 
@@ -30,7 +33,6 @@ Create new view folder for your domain:
 ``` bash
 mkdir resources/views/test
 ```
-
 ##### Override the view service provider
 
 in `config/app.php` find this line (in `providers` section):
@@ -43,6 +45,31 @@ and change it to:
 ```
 
 And that's it! 
+
+
+### Config files and helpers
+
+The package provides helper Facade through which one can access domain-specific configurations.
+One can publish default config file using:
+```bash
+php artisan vendor:publish --tag=multisite.config
+``` 
+
+The helper:
+```php
+\Multisite::config('some.key');
+```
+would return config equivallent to:
+```php
+config('multisite.{current_domain}.some.key');
+```
+
+##### Current domain helper
+
+To check current domain use the Facade helper:
+```php
+\Multisite::domain();
+```
 
 ## Multisite assets
 
