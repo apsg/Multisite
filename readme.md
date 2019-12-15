@@ -116,4 +116,3 @@ license. Please see the [license file](license.md) for more information.
 [link-travis]: https://travis-ci.org/apsg/multisite
 [link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/apsg
-[link-contributors]: ../../contributors
