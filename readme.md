@@ -100,7 +100,7 @@ Then one can use helpers provided with this package to automagically load in you
 ## Testing
 
 ``` bash
-./vendor/phpunit/phpunit/phpunit
+composer test
 ```
 
 ## License
