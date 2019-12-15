@@ -44,7 +44,7 @@ and change it to:
 \Apsg\Multisite\Providers\ViewServiceProvider::class,
 ```
 
-And that's it! 
+And that's it! From now on the Laravel's view engine would look for view files in main view directory (`resources/views/`) as well as in domain-specific directory (`resources/views/test` in the example above).
 
 
 ### Config files and helpers
@@ -100,7 +100,7 @@ Then one can use helpers provided with this package to automagically load in you
 ## Testing
 
 ``` bash
-$ composer test
+./vendor/phpunit/phpunit/phpunit
 ```
 
 ## License
