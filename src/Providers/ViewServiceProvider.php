@@ -1,4 +1,5 @@
 <?php
+
 namespace Apsg\Multisite\Providers;
 
 use Illuminate\View\FileViewFinder;
