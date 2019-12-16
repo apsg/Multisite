@@ -3,7 +3,6 @@ preset: laravel
 risky: false
 
 enabled:
-  - blank_line_after_namespace
   - binary_operator_spaces
 
 disabled:
