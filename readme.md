@@ -3,6 +3,7 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
+[![StyleCI Status][ico-styleci]][link-styleci]
 
 Package for managing multiple installations of the same code base. It gives the ability to change the views depending 
 on the "domain" but preserving the backend core the same. 
@@ -41,7 +42,7 @@ Illuminate\View\ViewServiceProvider::class,
 ```
 and change it to:
 ```php
-\Apsg\Multisite\Providers\ViewServiceProvider::class,
+\Apsg\Multisite\Providers\ViewServiceProvider::class;
 ```
 
 And that's it! From now on the Laravel's view engine would look for view files in main view directory (`resources/views/`) as well as in domain-specific directory (`resources/views/test` in the example above).
@@ -110,9 +111,10 @@ license. Please see the [license file](license.md) for more information.
 [ico-version]: https://img.shields.io/packagist/v/apsg/multisite.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/apsg/multisite.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/apsg/multisite/master.svg?style=flat-square
+[ico-styleci]: https://github.styleci.io/repos/228019147/shield 
 
 [link-packagist]: https://packagist.org/packages/apsg/multisite
 [link-downloads]: https://packagist.org/packages/apsg/multisite
 [link-travis]: https://travis-ci.org/apsg/multisite
-[link-styleci]: https://styleci.io/repos/12345678
+[link-styleci]: https://styleci.io/repos/228019147
 [link-author]: https://github.com/apsg
