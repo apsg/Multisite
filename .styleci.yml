@@ -1,1 +1,17 @@
 preset: laravel
+
+risky: false
+
+enabled:
+  - blank_line_after_namespace
+  - binary_operator_spaces
+
+disabled:
+  - blank_line_after_opening_tag
+  - short_array_syntax
+
+finder:
+  exclude:
+    - "tests"
+  name:
+    - "*.php"
