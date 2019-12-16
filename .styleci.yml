@@ -3,9 +3,10 @@ preset: laravel
 risky: false
 
 enabled:
-  - binary_operator_spaces
+  - concat_with_spaces
 
 disabled:
+  - concat_without_spaces
   - blank_line_after_opening_tag
   - short_array_syntax
 
