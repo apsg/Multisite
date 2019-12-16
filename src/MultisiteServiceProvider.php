@@ -1,4 +1,5 @@
 <?php
+
 namespace Apsg\Multisite;
 
 use Illuminate\Support\ServiceProvider;
@@ -22,7 +23,7 @@ class MultisiteServiceProvider extends ServiceProvider
 
     public function registerHelpers()
     {
-        require_once('helpers.php');
+        require_once 'helpers.php';
     }
 
     /**
