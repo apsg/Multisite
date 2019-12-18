@@ -1,7 +1,7 @@
 <?php
 namespace Apsg\Multisite\Tests;
 
-use Apsg\Multisite\Providers\ViewServiceProvider;
+use Apsg\Multisite\MultisiteServiceProvider;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Str;
 use Orchestra\Testbench\TestCase;
@@ -18,10 +18,10 @@ class ViewFinderTest extends TestCase
     public function it_checks_default_view_paths()
     {
         // given
-        $provider = new ViewServiceProvider($this->app);
+        $provider = new MultisiteServiceProvider($this->app);
 
         // when
-        $provider->registerViewFinder();
+        $provider->register();
         $paths = $this->app->make('view.finder')->getPaths();
 
         // then
