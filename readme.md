@@ -34,19 +34,8 @@ Create new view folder for your domain:
 ``` bash
 mkdir resources/views/test
 ```
-##### Override the view service provider
-
-in `config/app.php` find this line (in `providers` section):
-``` php
-Illuminate\View\ViewServiceProvider::class,
-```
-and change it to:
-```php
-\Apsg\Multisite\Providers\ViewServiceProvider::class;
-```
 
 And that's it! From now on the Laravel's view engine would look for view files in main view directory (`resources/views/`) as well as in domain-specific directory (`resources/views/test` in the example above).
-
 
 ### Config files and helpers
 

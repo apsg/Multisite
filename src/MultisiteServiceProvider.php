@@ -3,6 +3,7 @@
 namespace Apsg\Multisite;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\View\FileViewFinder;
 
 class MultisiteServiceProvider extends ServiceProvider
 {
@@ -38,6 +39,14 @@ class MultisiteServiceProvider extends ServiceProvider
         // Register the service the package provides.
         $this->app->singleton('multisite', function ($app) {
             return new Multisite;
+        });
+
+        $this->app->bind('view.finder', function ($app) {
+            $paths = $app['config']['view.paths'];
+
+            $paths[] = resource_path('views/' . $app['config']['multisite.domain']);
+
+            return new FileViewFinder($app['files'], $paths);
         });
     }
 
